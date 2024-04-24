@@ -54,7 +54,7 @@ def editar_produto(product_id):
 
         results_id = daoProduto.get_produto_id(product_id)
         if not results_id:
-            erros.append("Não foi encontrado um Produto com esse")
+            erros.append("Não foi encontrado um Produto com esse id")
             response = jsonify(erros)
             response.status_code = 404
             return response
